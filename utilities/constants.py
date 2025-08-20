@@ -1,4 +1,4 @@
-from typing import Any
+from typing import Any, Dict
 
 from ocp_resources.resource import Resource
 
@@ -354,3 +354,22 @@ OPENSHIFT_OPERATORS: str = "openshift-operators"
 MARIADB: str = "mariadb"
 MODEL_REGISTRY_CUSTOM_NAMESPACE: str = "model-registry-custom-ns"
 THANOS_QUERIER_ADDRESS = "https://thanos-querier.openshift-monitoring.svc:9092"
+CHAT_GENERATION_CONFIG: Dict[str, Any] = {
+    "service": {
+        "hostname": "qwen-isvc-predictor",
+        "port": 8032,
+        "request_timeout": 600,
+    }
+}
+BUILTIN_DETECTOR_CONFIG: Dict[str, Any] = {
+    "regex": {
+        "type": "text_contents",
+        "service": {
+            "hostname": "127.0.0.1",
+            "port": 8080,
+        },
+        "chunker_id": "whole_doc_chunker",
+        "default_threshold": 0.5,
+    }
+}
+MNT_MODELS: str = "/mnt/models"
