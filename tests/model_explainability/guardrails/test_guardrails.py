@@ -9,8 +9,6 @@ from timeout_sampler import retry
 
 from tests.model_explainability.guardrails.constants import (
     QWEN_ISVC_NAME,
-    CHAT_GENERATION_CONFIG,
-    BUILTIN_DETECTOR_CONFIG,
     PROMPT_WITH_PII,
     EXAMPLE_EMAIL_ADDRESS,
 )
@@ -23,7 +21,7 @@ from tests.model_explainability.guardrails.utils import (
     log_request_and_response,
 )
 from tests.model_explainability.utils import validate_tai_component_images
-from utilities.constants import Timeout
+from utilities.constants import Timeout, CHAT_GENERATION_CONFIG, BUILTIN_DETECTOR_CONFIG, MNT_MODELS, MinIo
 from utilities.plugins.constant import OpenAIEnpoints
 
 LOGGER = get_logger(name=__name__)
