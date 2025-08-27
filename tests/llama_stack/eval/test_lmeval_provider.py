@@ -12,7 +12,7 @@ TRUSTYAI_LMEVAL_ARCEASY = f"{LlamaStackProviders.Eval.TRUSTYAI_LMEVAL}::arc_easy
     "model_namespace, minio_pod, minio_data_connection, llama_stack_server_config",
     [
         pytest.param(
-            {"name": "test-guardrails-lls"},
+            {"name": "test-llamastack-lmeval"},
             MinIo.PodConfig.QWEN_HAP_BPIV2_MINIO_CONFIG,
             {"bucket": "llms"},
             {
