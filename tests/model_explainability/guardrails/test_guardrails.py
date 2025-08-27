@@ -46,7 +46,6 @@ HF_DETECTORS: Dict[str, Dict[str, Any]] = {
 }
 
 
-
 @pytest.mark.parametrize(
     "model_namespace, orchestrator_config, guardrails_orchestrator",
     [
