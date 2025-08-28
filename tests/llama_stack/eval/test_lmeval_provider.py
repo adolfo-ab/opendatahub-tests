@@ -55,7 +55,7 @@ class TestLlamaStackLMEvalProvider:
         self, minio_pod, minio_data_connection, patched_trustyai_operator_configmap_allow_online, llama_stack_client
     ):
         job = llama_stack_client.eval.run_eval(
-            benchmark_id=f"{LlamaStackProviders.Eval.TRUSTYAI_LMEVAL}::arc_easy",
+            benchmark_id=TRUSTYAI_LMEVAL_ARCEASY,
             benchmark_config={
                 "eval_candidate": {
                     "model": MNT_MODELS,
